@@ -60,6 +60,8 @@ public class App extends Application {
         // SDK初始化
         NIMClient.init(this, loginInfo(), options());
 
+
+        
         if (NIMUtil.isMainProcess(this)) {
             initAVChatKit();
             NIMClient.toggleNotification(true);//开启通知栏消息提醒
