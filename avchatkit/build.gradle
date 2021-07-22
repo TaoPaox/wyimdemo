@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.2'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 60
+        versionName '5.8.0'
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res', 'src/main/res-avchat']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:28.+"
+    implementation "com.android.support:recyclerview-v7:28.+"
+    implementation "com.android.support:design:28.+"
+    implementation "com.android.support.constraint:constraint-layout:1.0.2"
+//    compile 'com.github.bumptech.glide:glide:4.2.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
+    api 'com.github.bumptech.glide:glide:3.7.0'
+    api 'org.greenrobot:eventbus:3.0.0'
+
+
+    api 'com.netease.nimlib:basesdk:6.7.0'
+    // 音视频和互动白板服务需要
+    api 'com.netease.nimlib:nrtc:6.7.0'
+    // 音视频需要
+    api 'com.netease.nimlib:avchat:6.7.0'
+    // 聊天室需要
+    api 'com.netease.nimlib:chatroom:6.7.0'
+//    // 互动白板服务需要
+//    compile 'com.netease.nimlib:rts:7.4.0'
+//    // 全文检索服务需要
+//    compile 'com.netease.nimlib:lucene:7.4.0'
+    // 小米等厂商推送需要
+    api 'com.netease.nimlib:push:6.7.0'
+
+
+}

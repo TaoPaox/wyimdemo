@@ -1,0 +1,3 @@
+include ':avchatkit'
+include ':app'
+rootProject.name = "wyimdemo"
