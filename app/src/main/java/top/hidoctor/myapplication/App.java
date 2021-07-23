@@ -10,6 +10,7 @@ import android.provider.SyncStateContract;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.alibaba.fastjson.JSONObject;
 import com.netease.nim.avchatkit.AVChatKit;
 import com.netease.nim.avchatkit.DemoMixPushMessageHandler;
 import com.netease.nim.avchatkit.common.log.LogUtil;
@@ -61,11 +62,13 @@ public class App extends Application {
         NIMClient.init(this, loginInfo(), options());
 
 
-        
+
         if (NIMUtil.isMainProcess(this)) {
             initAVChatKit();
             NIMClient.toggleNotification(true);//开启通知栏消息提醒
         }
+
+
 
     }
 

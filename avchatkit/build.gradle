@@ -48,5 +48,6 @@ dependencies {
     // 小米等厂商推送需要
     api 'com.netease.nimlib:push:6.7.0'
 
+    api 'com.alibaba:fastjson:1.1.46.android'
 
 }
