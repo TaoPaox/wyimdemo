@@ -306,8 +306,8 @@ public class AVChatKit {
      * @param teamName     群组名称
      */
     public static void outgoingTeamCall(Context context, boolean receivedCall, String teamId, String roomId, ArrayList<String> accounts, String teamName, int callType) {
-//        TeamAVChatActivity.startActivity(context, receivedCall, teamId, roomId, accounts, teamName);
-        VideoService.startService(context, receivedCall, teamId, roomId, accounts, teamName, callType);
+        TeamAVChatActivity.startActivity(context, receivedCall, teamId, roomId, accounts, teamName);
+//        VideoService.startService(context, receivedCall, teamId, roomId, accounts, teamName, callType);
     }
 
     /**
