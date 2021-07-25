@@ -68,7 +68,7 @@ public class App extends Application {
             NIMClient.toggleNotification(true);//开启通知栏消息提醒
         }
 
-        
+
 
 
     }

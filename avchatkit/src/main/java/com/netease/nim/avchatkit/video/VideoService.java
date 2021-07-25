@@ -90,21 +90,21 @@ public class VideoService extends Service {
             return;
         }
 
-        if (!PermissionUtil.hasOverlayPermission(context)) {
-
-            Toast.makeText(context, "请授予显示悬浮窗权限", Toast.LENGTH_SHORT).show();
-
-            try {
-                Intent intent = new Intent();
-                intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);   // ACTION_MANAGE_OVERLAY_PERMISSION    ACTION_APPLICATION_DETAILS_SETTINGS
-                Uri uri = Uri.fromParts("package", context.getPackageName(), null);
-                intent.setData(uri);
-                context.startActivity(intent);
-            } catch (Exception e) {
-
-            }
-
-        } else {
+//        if (!PermissionUtil.hasOverlayPermission(context)) {
+//
+//            Toast.makeText(context, "请授予显示悬浮窗权限", Toast.LENGTH_SHORT).show();
+//
+//            try {
+//                Intent intent = new Intent();
+//                intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);   // ACTION_MANAGE_OVERLAY_PERMISSION    ACTION_APPLICATION_DETAILS_SETTINGS
+//                Uri uri = Uri.fromParts("package", context.getPackageName(), null);
+//                intent.setData(uri);
+//                context.startActivity(intent);
+//            } catch (Exception e) {
+//
+//            }
+//
+//        } else {
 
             Intent intent = new Intent();
             intent.setClass(context, VideoService.class);
@@ -116,7 +116,7 @@ public class VideoService extends Service {
             intent.putExtra(KEY_TYPE, callType);
             context.startService(intent);
 
-        }
+//        }
 
     }
 
