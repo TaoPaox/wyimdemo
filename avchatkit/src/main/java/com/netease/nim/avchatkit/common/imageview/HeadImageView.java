@@ -98,7 +98,7 @@ public class HeadImageView extends CircleImageView {
         final String thumbUrl = makeAvatarThumbNosUrl(url, thumbSize);
         Glide.with(getContext().getApplicationContext())
                 .load(thumbUrl)
-                .asBitmap()
+//                .asBitmap()
                 .centerCrop()
                 .placeholder(defaultResId)
                 .error(defaultResId)

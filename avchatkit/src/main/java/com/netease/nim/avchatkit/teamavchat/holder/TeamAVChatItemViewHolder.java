@@ -121,7 +121,7 @@ public class TeamAVChatItemViewHolder extends TeamAVChatItemViewHolderBase {
         final String thumbUrl = makeAvatarThumbNosUrl(userInfo != null ? userInfo.getAvatar() : null, DEFAULT_AVATAR_THUMB_SIZE);
         Glide.with(AVChatKit.getContext())
                 .load(thumbUrl)
-                .asBitmap()
+//                .asBitmap()
                 .centerCrop()
                 .placeholder(defaultResId)
                 .error(defaultResId)
@@ -131,7 +131,7 @@ public class TeamAVChatItemViewHolder extends TeamAVChatItemViewHolderBase {
             // 等待接听
             Glide.with(AVChatKit.getContext())
                     .load(R.drawable.t_avchat_loading)
-                    .asGif()
+//                    .asGif()
                     .into(loadingImage);
             loadingImage.setVisibility(View.VISIBLE);
             surfaceView.setVisibility(View.INVISIBLE);
